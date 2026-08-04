@@ -1,0 +1,75 @@
+# Full Adder using Verilog HDL
+
+## Project Overview
+
+This project implements a **1-bit Full Adder** using Verilog HDL. A Full Adder is a combinational logic circuit that adds three one-bit binary inputs (A, B, and Carry-in) and produces two outputs: Sum and Carry-out.
+
+## Features
+
+- Verilog HDL implementation
+- Complete testbench
+- Simulation waveform generation
+- Truth table verification
+- Easy to simulate using Vivado, ModelSim, or Icarus Verilog
+
+## Logic Equations
+
+Sum = A ^ B ^ Cin
+
+Carry = (A & B) | (B & Cin) | (A & Cin)
+
+## Project Files
+
+```
+full_adder.v
+full_adder_tb.v
+README.md
+output.png
+waveform.vcd
+```
+
+## Truth Table
+
+| A | B | Cin | Sum | Carry |
+|---|---|-----|-----|-------|
+|0|0|0|0|0|
+|0|0|1|1|0|
+|0|1|0|1|0|
+|0|1|1|0|1|
+|1|0|0|1|0|
+|1|0|1|0|1|
+|1|1|0|0|1|
+|1|1|1|1|1|
+
+## Expected Simulation Output
+
+```
+A B Cin | Sum Carry
+----------------------
+0 0 0 | 0 0
+0 0 1 | 1 0
+0 1 0 | 1 0
+0 1 1 | 0 1
+1 0 0 | 1 0
+1 0 1 | 0 1
+1 1 0 | 0 1
+1 1 1 | 1 1
+```
+
+## Simulation Steps
+
+1. Compile `full_adder.v` and `full_adder_tb.v`.
+2. Run the simulation.
+3. Open `waveform.vcd` in GTKWave (or view waveforms in Vivado/ModelSim).
+4. Verify that the outputs match the truth table.
+
+## Software Used
+
+- Xilinx Vivado
+- ModelSim
+- Icarus Verilog
+- GTKWave
+
+## Author
+
+Kori Sravani
